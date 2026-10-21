@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Objetos baseados na localização GPS</title>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+    
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ar-js-org/ar.js@3.4.8/aframe/build/aframe-ar.js"></script>
+    
+  </head>
+  <body>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      renderer="antialias: false; alpha: true; precision: medium"
+      arjs="sourceType: webcam; videoTexture: false; debugUIEnabled: false; sourceWidth: 960; sourceHeight: 720;">
+      
+      <a-camera
+        gps-camera="simulateLatitude: 51.049; simulateLongitude: -0.723; gpsMinDistance: 10; positionMinAccuracy: 50"
+        rotation-reader
+      ></a-camera>
+
+      <a-text
+        value="Ola Mundo!"
+        scale="6 6 6"
+        align="center"
+        color="#ff0000"
+        gps-entity-place="latitude: 51.0491; longitude: -0.723;"
+      ></a-text>
+
+      <a-text
+        value="Sul"
+        scale="6 6 6"
+        align="center"
+        color="#00aa00"
+        gps-entity-place="latitude: 51.0489; longitude: -0.723;"
+      ></a-text>
+
+      <a-box
+        color="#2196f3"
+        scale="3 3 3"
+        position="0 2 0"
+        gps-entity-place="latitude: 51.049; longitude: -0.7229;"
+      ></a-box>
+
+      <a-sphere
+        color="#ff9800"
+        radius="2"
+        position="0 4 0"
+        gps-entity-place="latitude: 51.049; longitude: -0.7231;"
+      ></a-sphere>
+
+      <a-cone
+        color="#9c27b0"
+        radius-bottom="1.5"
+        radius-top="0"
+        height="4"
+        position="0 2 0"
+        gps-entity-place="latitude: 51.0491; longitude: -0.7229;"
+      ></a-cone>
+    </a-scene>
+  </body>
+</html>
