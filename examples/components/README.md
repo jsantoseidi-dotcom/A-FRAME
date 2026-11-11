@@ -1,10 +1,12 @@
 # Componentes
 
-Cada componente do A-Frame Registry deverá ter uma pasta própria:
+O inventário histórico está em [../registry-inventory.md](../registry-inventory.md).
+
+Cada pacote terá uma pasta própria, com uma demonstração isolada:
 
 ```text
 components/
-└── nome-do-componente/
+└── nome-do-pacote/
     ├── index.html
     ├── README.md
     └── assets/
@@ -12,13 +14,20 @@ components/
 
 ## Critérios de validação
 
-- A demonstração abre sem erros de carregamento.
-- Dependências externas e respetivas versões estão identificadas.
-- O exemplo demonstra pelo menos uma funcionalidade real do componente.
-- O README documenta instalação, propriedades, eventos e limitações conhecidas.
-- A compatibilidade é testada com a versão A-Frame indicada.
-- Componentes abandonados ou incompatíveis ficam assinalados; não são apresentados como funcionais.
+- Identificar o pacote, versão exata, origem e licença.
+- Confirmar a API e as dependências na documentação do projeto original.
+- Não carregar versões históricas sem verificar a compatibilidade com A-Frame 1.8.0.
+- Demonstrar a funcionalidade real do componente, não apenas uma primitiva nativa com o mesmo nome.
+- Testar carregamento, consola do browser e comportamento da cena.
+- Documentar propriedades, eventos, limitações e resultado do teste.
+- Marcar como **Validado** apenas depois de executar o exemplo num browser.
 
-## Inventário
+## Estados
 
-O inventário completo será construído a partir do Registry e atualizado com o estado de cada exemplo: por analisar, em implementação, validado ou incompatível.
+- **Por analisar** — sem exemplo ou teste.
+- **Em implementação** — demonstração em construção.
+- **Validado** — testado com versões explicitamente indicadas.
+- **Incompatível / indisponível** — dependência ou API não funciona na configuração documentada.
+- **Substituído por funcionalidade nativa** — alternativa moderna identificada, sem alegar que o pacote antigo foi validado.
+
+O Registry original está descontinuado. A compatibilidade histórica indicada no inventário não deve ser interpretada como compatibilidade atual.
