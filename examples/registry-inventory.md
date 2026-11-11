@@ -76,3 +76,8 @@ Fonte: [aframevr/aframe-registry — registry.yml](https://github.com/aframevr/a
 5. Atualizar o estado apenas depois do teste real.
 
 A lista é um inventário fiel da fonte histórica consultada. Não inclui automaticamente todos os componentes publicados posteriormente no npm ou noutros repositórios da comunidade.
+
+
+## Diretório comunitário atualizado
+
+Para além deste arquivo histórico, existe um [Component Directory mantido pela comunidade](https://github.com/c-frame/aframewiki/blob/gh-pages/en/pages/component-directory.md), que se apresenta como alternativa moderna ao Registry desatualizado. Deve ser consultado numa segunda fase para identificar forks mantidos, substituições e componentes mais recentes. O objetivo deste repositório continua a ser documentar também os identificadores históricos pedidos, assinalando claramente os que foram substituídos ou deixaram de funcionar.
