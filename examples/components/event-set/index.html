@@ -17,14 +17,13 @@
 <main>
   <p><a href="../../index.html">← Voltar ao laboratório</a></p>
   <h1>event-set</h1>
-  <p>Move o cursor sobre o cubo para o destacar. Clica no cubo para alternar a escala e a cor; clica novamente para repor o estado inicial.</p>
+  <p>Move o cursor sobre o cubo para o destacar. Clica no cubo para aumentar a escala e alterar a cor.</p>
   <div class="scene">
     <a-scene embedded vr-mode-ui="enabled: true">
       <a-box id="target" position="0 1.2 -3" color="#65d5d0"
         event-set__enter="_event: mouseenter; material.color: #f3cf83"
         event-set__leave="_event: mouseleave; material.color: #65d5d0"
-        event-set__click="_event: click; scale: 1.35 1.35 1.35; material.color: #ee718b"
-        event-set__reset="_event: click; scale: 1 1 1; material.color: #65d5d0">
+        event-set__click="_event: click; scale: 1.35 1.35 1.35; material.color: #ee718b">
       </a-box>
       <a-plane position="0 0 -3" rotation="-90 0 0" width="8" height="8" color="#26364c"></a-plane>
       <a-sky color="#101827"></a-sky>
