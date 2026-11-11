@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratório A-Frame — Exemplos</title>
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <style>
+    :root { color-scheme: dark; --bg:#101827; --panel:#192538; --line:#2b3b52; --accent:#65d5d0; --muted:#a9b8ca; }
+    * { box-sizing:border-box }
+    body { margin:0; font:16px/1.55 system-ui,sans-serif; background:var(--bg); color:#f4f7fb }
+    header, main, footer { width:min(1100px,92vw); margin:auto }
+    header { padding:3rem 0 1.5rem }
+    h1 { font-size:clamp(2rem,5vw,3.5rem); line-height:1.05; margin:.4rem 0 1rem }
+    h2 { margin-top:2rem }
+    p { color:var(--muted) }
+    a { color:var(--accent) }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.14em; font-size:.78rem; font-weight:700 }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:1.2rem; margin:1.2rem 0 }
+    .scene { height:360px; overflow:hidden; border-radius:12px; background:#080d16 }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem }
+    .item { border:1px solid var(--line); border-radius:12px; padding:1rem; background:#142033 }
+    .item h3 { margin:.1rem 0 .5rem }
+    .status { display:inline-block; font-size:.75rem; border:1px solid var(--line); padding:.15rem .5rem; border-radius:99px; color:#f3cf83 }
+    code { color:#b9f0eb }
+    footer { padding:2rem 0 3rem; border-top:1px solid var(--line); margin-top:3rem }
+    @media(max-width:600px){ header{padding-top:2rem}.scene{height:280px} }
+  </style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">A-FRAME · LABORATÓRIO DE COMPONENTES</div>
+  <h1>Exemplos interativos</h1>
+  <p>Um espaço para explorar, executar e documentar componentes e experiências WebXR com A-Frame.</p>
+  <p><a href="https://aframe.io/aframe-registry/" target="_blank" rel="noreferrer">Consultar A-Frame Registry ↗</a></p>
+</header>
+<main>
+  <section class="panel">
+    <h2>01 · Cena de demonstração</h2>
+    <p>Exemplo funcional com primitivas A-Frame, texto e animação. Arrasta para olhar à volta; usa o rato ou os controlos do dispositivo.</p>
+    <div class="scene">
+      <a-scene embedded vr-mode-ui="enabled: true" renderer="colorManagement: true">
+        <a-box position="-1 1 -3" rotation="0 30 0" color="#65d5d0"
+          animation="property: rotation; to: 0 390 0; loop: true; dur: 8000; easing: linear"></a-box>
+        <a-sphere position="1 1.15 -3" radius=".8" color="#ee718b"
+          animation="property: position; to: 1 1.8 -3; dir: alternate; loop: true; dur: 1600"></a-sphere>
+        <a-cylinder position="0 .65 -4.5" radius=".45" height="1.3" color="#f3cf83"></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="12" height="12" color="#34445b"></a-plane>
+        <a-sky color="#101827"></a-sky>
+        <a-entity position="0 2.5 -3">
+          <a-text value="A-FRAME LAB" align="center" color="#ffffff" width="5"></a-text>
+        </a-entity>
+        <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+      </a-scene>
+    </div>
+  </section>
+
+  <section>
+    <h2>02 · Catálogo de componentes</h2>
+    <p>Pastas individuais serão acrescentadas à medida que cada integração for analisada e testada. Não marcamos componentes como funcionais antes de validar os exemplos.</p>
+    <div class="grid">
+      <article class="item"><h3>Animation</h3><p>Animações de propriedades e entidades.</p><span class="status">Demonstração base incluída</span></article>
+      <article class="item"><h3>Environment</h3><p>Geração e configuração de ambientes.</p><span class="status">Por implementar</span></article>
+      <article class="item"><h3>Physics System</h3><p>Corpos rígidos, colisões e forças.</p><span class="status">Por implementar</span></article>
+      <article class="item"><h3>Particle System</h3><p>Emissão e configuração de partículas.</p><span class="status">Por implementar</span></article>
+      <article class="item"><h3>Ocean</h3><p>Superfícies de água e ondas.</p><span class="status">Por implementar</span></article>
+      <article class="item"><h3>Text Geometry</h3><p>Texto tridimensional e geometria.</p><span class="status">Por implementar</span></article>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>03 · Como contribuir</h2>
+    <ol>
+      <li>Consultar a documentação e a licença do componente original.</li>
+      <li>Criar uma pasta com o nome do componente.</li>
+      <li>Adicionar uma demonstração mínima e outra interativa.</li>
+      <li>Documentar dependências, propriedades, eventos e versão testada.</li>
+      <li>Validar no browser antes de alterar o estado para funcional.</li>
+    </ol>
+    <p>Versão base da demonstração: A-Frame 1.8.0. Componentes externos podem exigir versões ou dependências diferentes.</p>
+  </section>
+</main>
+<footer><p>Projeto <a href="https://github.com/jsantoseidi-dotcom/A-FRAME">jsantoseidi-dotcom/A-FRAME</a> · Laboratório de exemplos A-Frame.</p></footer>
+</body>
+</html>
