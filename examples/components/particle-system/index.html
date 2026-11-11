@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>particle-system · Laboratório A-Frame</title>
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/@c-frame/aframe-particle-system-component@1.2.0/dist/aframe-particle-system-component.min.js"></script>
+  <style>
+    body { margin:0; font:16px/1.5 system-ui,sans-serif; background:#101827; color:#f4f7fb }
+    main { width:min(900px,92vw); margin:2rem auto }
+    a { color:#65d5d0 }
+    .scene { height:480px; border-radius:14px; overflow:hidden; background:#080d16 }
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="../../index.html">← Voltar ao laboratório</a></p>
+  <h1>particle-system</h1>
+  <p>Demonstração de partículas com o preset de chuva. Observa a emissão contínua acima da plataforma.</p>
+  <div class="scene">
+    <a-scene embedded vr-mode-ui="enabled: true">
+      <a-entity position="0 3 -3"
+        particle-system="preset: rain; particleCount: 1800; color: #9bdcff,#ffffff">
+      </a-entity>
+      <a-box position="0 0.1 -3" width="5" height="0.2" depth="5" color="#34445b"></a-box>
+      <a-sky color="#101827"></a-sky>
+      <a-entity light="type: ambient; intensity: 1.2"></a-entity>
+      <a-entity light="type: directional; intensity: 0.7" position="-1 3 2"></a-entity>
+      <a-entity camera look-controls position="0 1.6 1"></a-entity>
+    </a-scene>
+  </div>
+  <h2>O que demonstra</h2>
+  <ul>
+    <li>Carregamento do pacote comunitário de partículas.</li>
+    <li>Preset <code>rain</code>, densidade definida por <code>particleCount</code> e cores personalizadas.</li>
+    <li>Componente aplicado diretamente a uma entidade A-Frame.</li>
+  </ul>
+  <p><strong>Dependências:</strong> A-Frame 1.8.0 e @c-frame/aframe-particle-system-component 1.2.0.</p>
+  <p><strong>Estado:</strong> exemplo criado com base na documentação do pacote; falta validação manual em browser/dispositivo XR.</p>
+</main>
+</body>
+</html>
