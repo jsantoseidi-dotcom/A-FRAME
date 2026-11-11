@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>environment · Laboratório A-Frame</title>
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.5.0/dist/aframe-environment-component.min.js"></script>
+  <style>
+    body { margin:0; font:16px/1.5 system-ui,sans-serif; background:#101827; color:#f4f7fb }
+    main { width:min(900px,92vw); margin:2rem auto }
+    a { color:#65d5d0 }
+    .scene { height:480px; border-radius:14px; overflow:hidden; background:#080d16 }
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="../../index.html">← Voltar ao laboratório</a></p>
+  <h1>environment</h1>
+  <p>Ambiente procedural com preset de floresta, terreno e árvores. Arrasta para observar a paisagem.</p>
+  <div class="scene">
+    <a-scene embedded vr-mode-ui="enabled: true">
+      <a-entity environment="preset: forest; dressing: trees; dressingAmount: 35; ground: hills; groundColor: #526b45; skyType: atmosphere; fog: 0.25"></a-entity>
+      <a-entity camera look-controls wasd-controls position="0 1.6 4"></a-entity>
+    </a-scene>
+  </div>
+  <h2>O que demonstra</h2>
+  <ul>
+    <li>Preset <code>forest</code> para configurar uma paisagem.</li>
+    <li><code>dressing</code> e <code>dressingAmount</code> para distribuir elementos decorativos.</li>
+    <li><code>ground</code>, <code>groundColor</code> e <code>fog</code> para personalizar o ambiente.</li>
+  </ul>
+  <p><strong>Dependências:</strong> A-Frame 1.8.0 e aframe-environment-component 1.5.0.</p>
+  <p><strong>Estado:</strong> exemplo implementado segundo a documentação do projeto e a documentação oficial A-Frame 1.8.0; validação manual do CDN e renderização pendente.</p>
+</main>
+</body>
+</html>
