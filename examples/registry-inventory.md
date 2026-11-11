@@ -67,6 +67,14 @@ Fonte: [aframevr/aframe-registry — registry.yml](https://github.com/aframevr/a
 | Incompatível / indisponível | Não foi possível executar com a configuração documentada ou a dependência deixou de estar disponível. |
 | Substituído por funcionalidade nativa | A-Frame atual já oferece a funcionalidade ou existe uma alternativa mantida; não equivale a validar o pacote histórico. |
 
+## Componentes com documentação neste repositório
+
+| Componente | Exemplo | Estado |
+|---|---|---|
+| `event-set` | [Demonstração](./components/event-set/) | Implementado; validação manual pendente |
+| `particle-system` | [Demonstração](./components/particle-system/) | Implementado; validação manual pendente |
+| `environment` | [Demonstração](./components/environment/) | Implementado; validação manual pendente |
+
 ## Próximos passos
 
 1. Verificar a página npm/GitHub de cada pacote e a sua licença.
