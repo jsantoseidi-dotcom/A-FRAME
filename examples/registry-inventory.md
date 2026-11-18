@@ -80,6 +80,22 @@ Fonte: [aframevr/aframe-registry — registry.yml](https://github.com/aframevr/a
 
 O Component Directory comunitário lista `ocean` como mantido e confirmado com A-Frame 1.8.0. O README do pacote `aframe-extras` 7.7.0, por sua vez, declara a compatibilidade da série 7.x com A-Frame 1.7.x. A demonstração local fixa A-Frame 1.7.1 para seguir a declaração explícita do README do pacote; a indicação 1.8.0 do diretório é preservada como referência comunitária, não como substituição da declaração do projeto. Consulte [a documentação do exemplo ocean](./components/ocean/README.md).
 
+## Entradas históricas com substituição ou indisponibilidade identificada
+
+A análise do [Component Directory comunitário](https://github.com/c-frame/aframewiki/blob/gh-pages/en/pages/component-directory.md) identifica os casos abaixo. Não são criadas páginas de instalação para os pacotes antigos quando a fonte recomenda uma API nativa ou declara a entrada indisponível.
+
+| Entrada / pacote histórico | Situação indicada pelo diretório | Alternativa / tratamento no A-Frame 1.8.0 |
+|---|---|---|
+| `aframe-animation-component` / `animation` | Excluído por estar substituído pela animação nativa | Usar o componente [animation](https://aframe.io/docs/1.8.0/components/animation.html); a cena principal já o demonstra. |
+| `aframe-auto-detect-controllers-component` | Excluído por estar substituído por `tracked-controls` | Usar os componentes nativos de controladores; [documentação Interactions & Controllers](https://aframe.io/docs/1.8.0/introduction/interactions-and-controllers.html). |
+| `aframe-controller-cursor-component` / `controller-cursor` | Excluído por estar substituído por `cursor` | Usar o componente e primitivo [cursor](https://aframe.io/docs/1.8.0/introduction/interactions-and-controllers.html). |
+| `aframe-extras.cube-env-map` | Excluído por suporte nativo a cubemaps | Usar o primitivo [a-cubemap](https://aframe.io/docs/1.8.0/primitives/a-cubemap.html). |
+| `aframe-lerp-component` / `lerp` | Excluído por estar substituído pela animação nativa | Usar [animation](https://aframe.io/docs/1.8.0/components/animation.html), escolhendo a interpolação declarativa adequada. |
+| `aframe-rain` / `rain` | O diretório indica que está sem manutenção e aponta a redundância face a particle-system | Preferir o componente comunitário mantido [particle-system](./components/particle-system/); a demonstração deste repositório continua com validação manual pendente. |
+| `aframe-line-component` / `line` | O diretório indica que o repositório do pacote já não existe | Não reinstalar nem inventar uma API de substituição para o pacote. O A-Frame 1.8.0 também documenta um componente nativo [line](https://aframe.io/docs/1.8.0/components/line.html), mas não se assume compatibilidade com a API do pacote histórico. |
+
+Estas decisões descrevem a orientação do diretório comunitário e a documentação atual do A-Frame; não constituem testes de browser aos pacotes antigos.
+
 ## Próximos passos
 
 1. Verificar a página npm/GitHub de cada pacote e a sua licença.
