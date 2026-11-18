@@ -74,6 +74,11 @@ Fonte: [aframevr/aframe-registry — registry.yml](https://github.com/aframevr/a
 | `event-set` | [Demonstração](./components/event-set/) | Implementado; validação manual pendente |
 | `particle-system` | [Demonstração](./components/particle-system/) | Implementado; validação manual pendente |
 | `environment` | [Demonstração](./components/environment/) | Implementado; validação manual pendente |
+| `ocean` | [Demonstração](./components/ocean/) | Implementado; validação manual pendente |
+
+### Nota de compatibilidade — `ocean`
+
+O Component Directory comunitário lista `ocean` como mantido e confirmado com A-Frame 1.8.0. O README do pacote `aframe-extras` 7.7.0, por sua vez, declara a compatibilidade da série 7.x com A-Frame 1.7.x. A demonstração local fixa A-Frame 1.7.1 para seguir a declaração explícita do README do pacote; a indicação 1.8.0 do diretório é preservada como referência comunitária, não como substituição da declaração do projeto. Consulte [a documentação do exemplo ocean](./components/ocean/README.md).
 
 ## Próximos passos
 
