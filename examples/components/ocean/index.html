@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ocean · Laboratório A-Frame</title>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.7.0/dist/aframe-extras.min.js"></script>
+  <style>
+    body { margin:0; font:16px/1.5 system-ui,sans-serif; background:#101827; color:#f4f7fb }
+    main { width:min(900px,92vw); margin:2rem auto }
+    a { color:#65d5d0 }
+    .scene { height:480px; border-radius:14px; overflow:hidden; background:#080d16 }
+    code { color:#b9f0eb }
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="../../index.html">← Voltar ao laboratório</a></p>
+  <h1>ocean</h1>
+  <p>Superfície oceânica de ondas animadas, criada pelo componente e primitivo <code>a-ocean</code> do A-Frame Extras.</p>
+  <div class="scene">
+    <a-scene embedded vr-mode-ui="enabled: true">
+      <a-ocean position="0 0 -4" width="24" depth="24" density="32" color="#167fa8" speed="2"></a-ocean>
+      <a-sky color="#c6e7f2"></a-sky>
+      <a-entity light="type: ambient; color: #ffffff; intensity: 0.75"></a-entity>
+      <a-entity light="type: directional; color: #ffffff; intensity: 0.8" position="-2 5 3"></a-entity>
+      <a-entity camera look-controls wasd-controls position="0 5 7" rotation="-24 0 0"></a-entity>
+    </a-scene>
+  </div>
+  <h2>O que demonstra</h2>
+  <ul>
+    <li>O primitivo <code>&lt;a-ocean&gt;</code>, que regista o componente <code>ocean</code>.</li>
+    <li>Mapeamento de <code>width</code>, <code>depth</code>, <code>density</code>, <code>color</code> e <code>speed</code> para o componente.</li>
+    <li>Ondas animadas geradas sobre uma geometria subdividida.</li>
+  </ul>
+  <p><strong>Dependências fixadas:</strong> A-Frame 1.7.1 e A-Frame Extras 7.7.0.</p>
+  <p><strong>Estado:</strong> exemplo implementado com base na API do código-fonte da versão 7.7.0; validação manual do carregamento e da animação pendente.</p>
+</main>
+</body>
+</html>
