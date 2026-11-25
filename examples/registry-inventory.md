@@ -74,7 +74,7 @@ Fonte: [aframevr/aframe-registry — registry.yml](https://github.com/aframevr/a
 | `event-set` | [Demonstração](./components/event-set/) | Implementado; validação manual pendente |
 | `particle-system` | [Demonstração](./components/particle-system/) | Implementado; validação manual pendente |
 | `environment` | [Demonstração](./components/environment/) | Implementado; validação manual pendente |
-| `ocean` | [Demonstração](./components/ocean/) | Implementado; validação manual pendente |
+| `ocean` | [Demonstração](./components/ocean/) | Implementado; validação manual pendente |\n| `physics-system` | [Demonstração](./components/physics-system/) | Implementado; validação manual pendente |
 
 ### Nota de compatibilidade — `ocean`
 
@@ -96,7 +96,7 @@ A análise do [Component Directory comunitário](https://github.com/c-frame/afra
 
 Estas decisões descrevem a orientação do diretório comunitário e a documentação atual do A-Frame; não constituem testes de browser aos pacotes antigos.
 
-## Próximos passos
+### Nota de análise — `physics-system`\n\nO pacote histórico `aframe-physics-system` tem um fork comunitário mantido: `@c-frame/aframe-physics-system` 4.2.4, licença MIT. O `package.json` declara `peerDependencies.aframe >=0.5.0`, mas o ambiente de desenvolvimento do pacote usa `~1.1.0`; o diretório comunitário indica compatibilidade com 1.8.0. A demonstração local fixa A-Frame 1.8.0 e o build Cannon 4.2.4, sem considerar essa combinação validada até execução num browser. A API Cannon e Ammo não é intercambiável; o exemplo documenta exclusivamente Cannon. Ver [README do exemplo](./components/physics-system/README.md).\n\n## Próximos passos
 
 1. Verificar a página npm/GitHub de cada pacote e a sua licença.
 2. Fixar uma versão explícita da dependência, sem usar `latest` em exemplos reproduzíveis.
